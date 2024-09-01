@@ -9,15 +9,20 @@
             background-color: #2c5f2d; /* Verde oscuro */
             color: white; /* Texto en blanco */
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            overflow: hidden; /* Evitar que el contenido desborde */
+            min-height: 100vh; /* Asegura que el contenido ocupe al menos el alto de la ventana */
+            overflow-x: hidden; /* Evita el desbordamiento horizontal */
+        }
+
+        .content {
+            text-align: center;
+            max-width: 90vw; /* Ajustar el ancho máximo para pantallas pequeñas */
+            margin-bottom: 100px; /* Espacio suficiente para el botón */
         }
 
         .header {
@@ -25,13 +30,10 @@
             font-weight: bold;
             font-size: 1.2em;
             margin-bottom: 10px;
-            text-align: center;
-            max-width: 90vw; /* Ajustar el ancho máximo para pantallas pequeñas */
             word-wrap: break-word; /* Asegurarse de que el texto no se desborde */
         }
 
         .image-container {
-            text-align: center;
             padding: 10px;
             background-color: #3d6f3b; /* Verde intermedio */
             border: 2px solid white;
@@ -39,7 +41,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 90vw; /* Ajustar el ancho máximo para pantallas pequeñas */
             overflow: hidden; /* Evitar que la imagen desborde */
-            position: relative; /* Para posicionar el botón de regreso */
+            margin: 0 auto; /* Centrar el contenedor de la imagen */
         }
 
         .image-container img {
@@ -61,21 +63,43 @@
             text-decoration: none;
             font-weight: bold;
             text-align: center;
+            position: fixed;
+            bottom: 20px; /* Asegura que el botón esté siempre en la parte inferior */
         }
 
         .back-button:hover {
             background-color: #2c5f2d; /* Verde oscuro */
             border-color: #ffcc00; /* Mantener el borde amarillo */
         }
+        
+        .vendor-info {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: white;
+            background-color: #3d6f3b; /* Fondo verde intermedio */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px; /* Espacio debajo de la información del vendedor */
+        }
+
+        .vendor-info p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
-    <div class="header" id="image-name"></div>
-    <div class="image-container">
-        <img id="image" src="" alt="Imagen Ampliada">
+    <div class="content">
+        <div class="header" id="image-name"></div>
+        <div class="image-container">
+            <img id="image" src="" alt="Imagen Ampliada">
+        </div>
+        <div class="vendor-info">
+            <p>Vendedor: Diana Lucia Miranda Alzate</p>
+            <p>Tel: 3114185444 - Whatsapp: 3114185444</p>
+        </div>
     </div>
     <a href="/" class="back-button">Regresar a los Productos</a>
-
     <script>
         // Obtener el parámetro 'img' de la URL
         const urlParams = new URLSearchParams(window.location.search);
