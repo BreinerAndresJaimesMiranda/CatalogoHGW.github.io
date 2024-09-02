@@ -10,6 +10,10 @@
             background-color: #2c5f2d; 
             color: white; 
             font-family: Arial, sans-serif;
+            background-image: url('images/fondo.jpg');
+            background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat;
         }
 
         h1 {
@@ -26,7 +30,7 @@
         }
 
         .grid-item {
-            background-color: #3d6f3b; 
+            background-color: rgba(61, 111, 59, 0.5)/*#3d6f3b*/; 
             border: 2px solid white;
             border-radius: 8px;
             padding: 10px;
@@ -45,7 +49,7 @@
 
         .image-title {
             margin-bottom: 10px;
-            color: #ffcc00; 
+            color: white/*#ffcc00*/; 
             font-weight: bold;
             text-align: center;
         }
@@ -62,7 +66,7 @@
             font-family: Arial, sans-serif;
             font-size: 16px;
             color: white;
-            background-color: #347535;
+            background-color: rgba(52, 117, 53, 0.8)/*#347535*/;
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -80,10 +84,19 @@
         .vendor-info p {
             margin: 5px 0;
         }
+
+        .titulo{
+            color:white;
+            background-color: rgba(44, 95, 45, 0.7)/*#2c5f2d*/ ;/*#3d6f3b*/
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px; 
+        }
     </style>
 </head>
 <body>
-    <h1>Lista de Productos</h1>
+    <h1 class="titulo">Lista de Productos</h1>
     <div class="grid-container">
         
     <div class="grid-item">
@@ -102,7 +115,7 @@
     
     <div class="grid-item">
         <div class="image-title">Blue Berry Coffee</div>
-        <a href="image.html?img=Blue Berry Coffee.jpg">
+        <a href="image.html?img=Blue Berry Coffee.jpg&video=https://drive.google.com/file/d/1ySSEUo7BCUGyXFx1Ka-VzAeGIzOHVbNf/view?usp=sharing">
             <img src="images/Blue Berry Coffee.jpg" alt="Blue Berry Coffee.jpg">
         </a>
     </div> 
