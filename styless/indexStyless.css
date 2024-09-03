@@ -78,13 +78,43 @@ a:hover {
     margin: 5px 0;
 }
 
-.titulo{
-    color:white;
-    background-color: rgba(44, 95, 45, 0.7)/*#2c5f2d*/ ;/*#3d6f3b*/
+
+.titulo {
+    color: white; /* Color del texto */
+    background-color: rgba(44, 95, 45, 0.7); /* Fondo del contenedor */
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    position: relative;
+    padding-left: 60px; /* Espacio para la imagen en el borde izquierdo */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    font-size: 1.5em; /* Tamaño de la fuente */
+}
+
+.titulo img {
+    width: 40px; /* Tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: absolute;
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+    top: 50%; /* Alinea la imagen verticalmente en el centro */
+    transform: translateY(-50%); /* Centra la imagen verticalmente */
+    background-color: rgba(255, 255, 255, 0.616);
+    overflow: hidden; 
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.titulo-texto {
+    margin-left: 50px; /* Espacio para la imagen a la izquierda del texto */
+    text-align: center; /* Centra el texto */
+    flex: 1; /* Ocupa el espacio restante */
+    color: white; /* Color del texto */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    font-size: 1.5em; /* Tamaño de la fuente */
 }
 
 .link{
